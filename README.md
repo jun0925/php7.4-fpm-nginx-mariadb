@@ -35,6 +35,11 @@ rm -rf public
 composer create-project --prefer-dist laravel/laravel="8.*" .
 ```
 
+Mac 또는 Linux를 사용한다면, stroage, bootstrap/cache, public/files 디렉터리의 권한을 변경한다.
+```
+$ chmod -R 775 storage bootstrap/cache public/files
+```
+
 Laravel 프로젝트를 생성했다면 브라우저에 [localhost:8088](http://localhost:8088)로 접속하여 화면에 Laravel이 기본 페이지가 표시되면 정상적으로 설치완료입니다.
 
 php artisan 명령어를 사용하는 방법을 2가지가 있는데 2가지중 선호하는 방법을 사용하시면 됩니다.
