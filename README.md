@@ -9,7 +9,9 @@ Docker를 설치했다면 로컬에서 작업할 폴더를 생성합니다. 폴�
 docker-compose build && docker-compose up -d
 ```
 
-종료할때는 아래 명령어를 사용합니다.
+docker를 실행했다면 [localhost:8088](http://localhost:8088) 주소로 이동하여 src/public/index.html이 화면에 표시되는지 확인합니다.
+
+docker-compose를 종료할때는 아래 명령어를 사용합니다.
 ```
 docker-compose down
 ```
@@ -23,7 +25,12 @@ docker-compose down
 Laravel을 설치하기 위해서는 시스템에 Composer를 설치해야 설치해야합니다.
 Composer 설치는 Composer 사이트를 참고 부탁드립니다. [Composer 공식 사이트](https://getcomposer.org/)
 
-Laravel 프로젝트는 src 아래에 만들어야 합니다. src 폴더로 이동한 후 아래 명령어로 laravel 8을 설치합니다.
+Laravel 프로젝트는 src 아래에 만들어야 합니다. src 폴더로 이동하여 public 폴더를 삭제합니다. 
+```
+rm -rf public
+```
+
+그리고 Laravel 8 Project를 생성합니다.
 ```
 composer create-project --prefer-dist laravel/laravel="8.*" .
 ```
